@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Personal | Urzica Mihaela</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Hero Section -->
+    <header class="hero-gradient text-white py-16 px-4 text-center shadow-lg">
+        <div class="max-w-4xl mx-auto">
+            <div class="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center text-indigo-600 text-5xl font-bold shadow-inner">
+                UM
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Urzica Mihaela</h1>
+            <p class="text-xl opacity-90 font-light italic">Elevă în clasa a XII-a • Pasionată de Artă și Voluntariat</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Sidebar: Informații Personale -->
+        <div class="md:col-span-1 space-y-6">
+            <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-4 flex items-center text-indigo-600">
+                    <i class="fas fa-user-circle mr-2"></i> Date Personale
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <span class="w-8 text-indigo-500"><i class="fas fa-calendar-alt"></i></span>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase">Vârstă</p>
+                            <p class="font-medium">18 ani</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-8 text-indigo-500"><i class="fas fa-star"></i></span>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase">Zodie</p>
+                            <p class="font-medium">Săgetător</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-8 text-indigo-500"><i class="fas fa-school"></i></span>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase">Statut</p>
+                            <p class="font-medium">Elevă, Clasa a XII-a</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                <h3 class="text-lg font-bold mb-4 text-indigo-700">Contact</h3>
+                <p class="text-sm text-gray-600 mb-4">Ești interesat de o colaborare în proiecte de voluntariat sau dans?</p>
+                <button class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
+                    Trimite un mesaj
+                </button>
+            </section>
+        </div>
+
+        <!-- Main Content: Experiență și Hobby-uri -->
+        <div class="md:col-span-2 space-y-8">
+            
+            <!-- Secțiunea Dans -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="bg-indigo-100 p-2 rounded-lg mr-3"><i class="fas fa-shoe-prints text-indigo-600"></i></span>
+                    Activitate Sportivă & Artistică
+                </h2>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-indigo-500 card-hover">
+                    <h3 class="text-xl font-semibold mb-1">Practicarea Dansului</h3>
+                    <p class="text-indigo-600 font-medium mb-3">Durată: 2 ani</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Dansul reprezintă pentru mine un mod de exprimare și disciplină. În ultimii doi ani, am dezvoltat abilități de coordonare, lucru în echipă și perseverență prin repetiții constante și performanțe artistice.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Secțiunea Preferințe -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="bg-purple-100 p-2 rounded-lg mr-3"><i class="fas fa-heart text-purple-600"></i></span>
+                    Interese și Preferințe
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Film -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-start space-x-4 card-hover">
+                        <div class="text-2xl text-red-500"><i class="fas fa-film"></i></div>
+                        <div>
+                            <h4 class="font-bold">Privitul filmelor</h4>
+                            <p class="text-sm text-gray-500">Pasionată de cinematografie și povești vizuale.</p>
+                        </div>
+                    </div>
+                    <!-- Citit -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-start space-x-4 card-hover">
+                        <div class="text-2xl text-blue-500"><i class="fas fa-book-open"></i></div>
+                        <div>
+                            <h4 class="font-bold">Cititul</h4>
+                            <p class="text-sm text-gray-500">Explorarea literaturii pentru dezvoltare personală.</p>
+                        </div>
+                    </div>
+                    <!-- Voluntariat -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-start space-x-4 card-hover">
+                        <div class="text-2xl text-green-500"><i class="fas fa-hands-helping"></i></div>
+                        <div>
+                            <h4 class="font-bold">Voluntariat</h4>
+                            <p class="text-sm text-gray-500">Implicare activă în cauze sociale și comunitate.</p>
+                        </div>
+                    </div>
+                    <!-- Dans -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-start space-x-4 card-hover">
+                        <div class="text-2xl text-pink-500"><i class="fas fa-music"></i></div>
+                        <div>
+                            <h4 class="font-bold">Dansul</h4>
+                            <p class="text-sm text-gray-500">Muzica și mișcarea fac parte din viața mea.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Citat Motivațional -->
+            <section class="bg-gray-800 text-white p-8 rounded-2xl text-center italic">
+                <p class="text-lg opacity-80">"Dansul este limbajul ascuns al sufletului."</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 - CV Digital Urzica Mihaela. Creat cu pasiune.</p>
+    </footer>
+
+</body>
+</html>
+
+```
