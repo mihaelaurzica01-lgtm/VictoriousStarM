@@ -20,7 +20,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, .font-serif {
+        h1, h2, h3, .font-serif {
             font-family: 'Playfair Display', serif;
         }
 
@@ -46,6 +46,29 @@
             to { transform: translate(20%, 20%); }
         }
 
+        .link-direct {
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: #ffffff;
+            margin-top: 0.5rem;
+            background: #4361ee;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .link-direct:hover {
+            background: #ff4d6d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
+        }
+
         .skill-tag {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: default;
@@ -60,11 +83,12 @@
 
         .card-reveal {
             border-bottom: 4px solid transparent;
-            transition: border-color 0.4s;
+            transition: all 0.4s;
         }
 
         .card-reveal:hover {
             border-color: var(--accent);
+            transform: translateY(-5px);
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -105,7 +129,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            <!-- Coloana 1 -->
+            <!-- Coloana Stanga (Contact & Skills) -->
             <div class="lg:col-span-4 space-y-12">
                 <section class="glass p-8 rounded-[2rem] shadow-xl">
                     <h2 class="text-2xl font-bold mb-6 flex items-center italic">
@@ -113,11 +137,11 @@
                         Să vorbim
                     </h2>
                     <div class="space-y-4">
-                        <a href="tel:+37360876569" class="flex items-center p-3 hover:bg-white rounded-xl transition group">
+                        <a href="tel:+37360876569" class="flex items-center p-3 hover:bg-white rounded-xl transition group no-underline">
                             <i class="fas fa-phone-alt w-10 text-blue-500 group-hover:scale-110 transition"></i>
                             <span class="text-slate-600 font-medium">+373 60876569</span>
                         </a>
-                        <a href="mailto:mihaelaurzica01@gmail.com" class="flex items-center p-3 hover:bg-white rounded-xl transition group">
+                        <a href="mailto:mihaelaurzica01@gmail.com" class="flex items-center p-3 hover:bg-white rounded-xl transition group no-underline">
                             <i class="fas fa-envelope w-10 text-pink-500 group-hover:scale-110 transition"></i>
                             <span class="text-slate-600 font-medium text-sm">mihaelaurzica01@gmail.com</span>
                         </a>
@@ -127,22 +151,20 @@
                 <section>
                     <h2 class="text-2xl font-bold mb-6 italic">Aptitudini Cheie</h2>
                     <div class="flex flex-wrap gap-3">
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Leadership</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Comunicare</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Creativitate</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Empatie</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Organizare</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Perseverență</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Actorie</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Regie</span>
-                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium">Editare</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Leadership</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Comunicare</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Creativitate</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Empatie</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Organizare</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Regie & Edit</span>
+                        <span class="skill-tag px-4 py-2 glass rounded-xl shadow-sm border border-slate-100 font-medium italic">Actorie</span>
                     </div>
                 </section>
 
                 <section class="bg-slate-900 text-white p-8 rounded-[2rem] shadow-2xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl"><i class="fas fa-language"></i></div>
-                    <h2 class="text-xl font-bold mb-6">Limbi</h2>
-                    <div class="space-y-4">
+                    <h2 class="text-xl font-bold mb-6 italic">Limbi Străine</h2>
+                    <div class="space-y-4 text-sm">
                         <div class="flex justify-between items-center">
                             <span>Română</span> <span class="text-pink-400 font-bold uppercase text-[10px] tracking-widest">Nativ</span>
                         </div>
@@ -152,112 +174,120 @@
                         <div class="flex justify-between items-center">
                             <span>Rusă</span> <span class="text-indigo-400 font-bold uppercase text-[10px] tracking-widest">B1 Intermediate</span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span>Franceză</span> <span class="text-slate-400 font-bold uppercase text-[10px] tracking-widest">A2 Basic</span>
-                        </div>
                     </div>
                 </section>
             </div>
 
-            <!-- Coloana 2 -->
+            <!-- Coloana Dreapta (Continut) -->
             <div class="lg:col-span-8 space-y-12">
                 <section class="relative">
                     <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-pink-500 rounded-full"></div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Povestea mea</h2>
-                    <p class="text-xl text-slate-600 leading-relaxed font-light">
-                        Sunt o fire creativă cu un spirit de <span class="text-indigo-600 font-semibold italic underline decoration-pink-300">lider</span>. 
-                        Îmi place să construiesc povești, fie prin regie și editare video, fie prin mișcare și dans. Voluntariatul este locul unde îmi pun 
-                        <span class="text-slate-900 font-bold">empatia în acțiune</span>, coordonând proiecte care aduc valoare comunității și mediului înconjurător.
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 italic">Povestea mea</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed font-light italic">
+                        Sunt o fire creativă cu un spirit de lider. Voluntariatul este locul unde îmi pun empatia în acțiune, coordonând proiecte care aduc valoare comunității. Experiența de a gestiona evenimente mari mi-a oferit reziliență și abilități excelente de problem solving.
                     </p>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold flex items-center"><i class="fas fa-graduation-cap mr-3 text-blue-500"></i> Educație</h3>
-                        <div class="glass p-6 rounded-2xl card-reveal">
+                <!-- Educație Re-introdusă -->
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 italic"><i class="fas fa-graduation-cap mr-3 text-blue-500"></i> Educație</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass p-6 rounded-2xl border-l-4 border-pink-500 card-reveal">
                             <span class="text-xs font-bold text-pink-500 px-2 py-1 bg-pink-50 rounded">2023 - 2026</span>
                             <h4 class="font-bold mt-2">Liceul Teoretic "Mihai Marinciuc"</h4>
                             <p class="text-sm text-slate-500">Chișinău, str. Ion Pelivan</p>
                         </div>
-                        <div class="glass p-6 rounded-2xl card-reveal opacity-80">
+                        <div class="glass p-6 rounded-2xl border-l-4 border-blue-500 card-reveal">
                             <span class="text-xs font-bold text-blue-500 px-2 py-1 bg-blue-50 rounded">2014 - 2023</span>
-                            <h4 class="font-bold mt-2 text-sm">Gimnaziul Bumbăta</h4>
-                            <p class="text-xs text-slate-500 italic">Membru Consiliul de Elevi</p>
+                            <h4 class="font-bold mt-2">Gimnaziul Bumbăta</h4>
+                            <p class="text-sm text-slate-500 italic">Membru activ Consiliul de Elevi</p>
                         </div>
                     </div>
+                </section>
 
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold flex items-center"><i class="fas fa-hand-holding-heart mr-3 text-pink-500"></i> Voluntariat</h3>
-                        <div class="bg-indigo-600 text-white p-6 rounded-2xl shadow-lg transform hover:-rotate-1 transition">
-                            <h4 class="font-bold">Coordonator Eveniment</h4>
-                            <p class="text-xs text-indigo-200 mb-4 italic">ARTCO TRIVIA "Quiz" @ ARTICO</p>
-                            <p class="text-sm leading-relaxed">Organizarea de competiții intelectuale și activități creative pentru copii.</p>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Experiență Coordonare -->
                 <section>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 italic">Arta & Performanță</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <div class="glass p-6 rounded-3xl text-center group hover:bg-slate-900 hover:text-white transition-all">
-                            <div class="w-12 h-12 bg-pink-100 text-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition">
-                                <i class="fas fa-theater-masks"></i>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 italic"><i class="fas fa-tasks mr-3 text-pink-500"></i> Coordonare & Voluntariat</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="glass p-8 rounded-[2.5rem] card-reveal">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Bingo & Quiz "Trivia"</h3>
+                            <p class="text-sm text-slate-600 mb-6">Managementul evenimentelor la ARTICO, gestionând interacțiunea cu publicul și logistica.</p>
+                            <div class="flex flex-col gap-3">
+                                <a href="https://www.instagram.com/p/DCJlvZaIVYe/?igsh=cmdsZ2g4dDI4NG55" target="_blank" class="link-direct">
+                                    <i class="fab fa-instagram"></i> Deschide Link Quiz
+                                </a>
+                                <a href="https://www.instagram.com/p/DJeXKAmIEm_/?igsh=bXFheTZrem1rM3V2" target="_blank" class="link-direct">
+                                    <i class="fab fa-instagram"></i> Deschide Link Bingo
+                                </a>
                             </div>
-                            <h4 class="font-bold">Actorie</h4>
-                            <p class="text-[10px] uppercase mt-2 opacity-60 tracking-widest">Exprimare</p>
                         </div>
-                        <div class="glass p-6 rounded-3xl text-center group hover:bg-slate-900 hover:text-white transition-all">
-                            <div class="w-12 h-12 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition">
-                                <i class="fas fa-video"></i>
+
+                        <div class="glass p-8 rounded-[2.5rem] card-reveal">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Coordonator "1 Iunie"</h3>
+                            <p class="text-sm text-slate-600 mb-6">Am coordonat activități logistice și creative, dezvoltând abilități de multitasking.</p>
+                            <div class="flex flex-col gap-3">
+                                <a href="https://www.facebook.com/share/p/18VhZtFJTZ/" target="_blank" class="link-direct">
+                                    <i class="fab fa-facebook"></i> Album Facebook #1
+                                </a>
+                                <a href="https://www.facebook.com/share/p/18VeswMkqb/" target="_blank" class="link-direct">
+                                    <i class="fab fa-facebook"></i> Album Facebook #2
+                                </a>
                             </div>
-                            <h4 class="font-bold">Regie & Edit</h4>
-                            <p class="text-[10px] uppercase mt-2 opacity-60 tracking-widest">Viziune</p>
-                        </div>
-                        <div class="glass p-6 rounded-3xl text-center group hover:bg-slate-900 hover:text-white transition-all">
-                            <div class="w-12 h-12 bg-indigo-100 text-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition">
-                                <i class="fas fa-shoe-prints"></i>
-                            </div>
-                            <h4 class="font-bold">Dans</h4>
-                            <p class="text-[10px] uppercase mt-2 opacity-60 tracking-widest">2 Ani Practică</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="bg-white p-8 rounded-[3rem] border-2 border-dashed border-slate-200">
-                    <h2 class="text-2xl font-bold mb-6 text-center">Ce urmează? <span class="text-pink-500">#Obiective</span></h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-center p-4 bg-slate-50 rounded-2xl">
-                            <span class="text-2xl mr-4">🚀</span>
-                            <span class="text-sm font-medium text-slate-700">Dezvoltarea abilităților de leadership internațional</span>
+                <!-- Performanță Artistică -->
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 italic"><i class="fas fa-palette mr-3 text-yellow-500"></i> Performanță Artistică</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="glass p-8 rounded-[2.5rem] card-reveal border-l-8 border-indigo-500">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 italic">Dans (2 ani experiență)</h3>
+                            <p class="text-sm text-slate-600 mb-6 italic">Exprimare prin mișcare, disciplină și spirit de echipă.</p>
+                            <div class="flex flex-col gap-3">
+                                <a href="https://www.instagram.com/p/DRSadQVjGvO/?img_index=5&igsh=MTZ4Zzk3MXpzbXducA==" target="_blank" class="link-direct">
+                                    <i class="fab fa-instagram"></i> Vezi Moment Dans 1
+                                </a>
+                                <a href="https://www.instagram.com/p/DIgW0qNsuKs/?img_index=1&igsh=b296NW85eXEyMGo2" target="_blank" class="link-direct">
+                                    <i class="fab fa-instagram"></i> Vezi Moment Dans 2
+                                </a>
+                            </div>
                         </div>
-                        <div class="flex items-center p-4 bg-slate-50 rounded-2xl">
-                            <span class="text-2xl mr-4">🌱</span>
-                            <span class="text-sm font-medium text-slate-700">Implicare în noi proiecte ecologice</span>
-                        </div>
-                        <div class="flex items-center p-4 bg-slate-50 rounded-2xl">
-                            <span class="text-2xl mr-4">🎬</span>
-                            <span class="text-sm font-medium text-slate-700">Perfecționarea în regie și producție video</span>
-                        </div>
-                        <div class="flex items-center p-4 bg-slate-50 rounded-2xl">
-                            <span class="text-2xl mr-4">🌍</span>
-                            <span class="text-sm font-medium text-slate-700">Schimburi culturale și descoperirea de culturi noi</span>
+
+                        <div class="bg-slate-900 text-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-2xl">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 italic text-pink-500">Regie & Film</h3>
+                                <p class="text-sm text-slate-400 mb-8 italic">Viziune artistică completă și editare video narativă.</p>
+                            </div>
+                            <a href="https://youtu.be/VupPMnYbXTc?feature=shared" target="_blank" class="w-full text-center bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-2xl font-bold transition no-underline">
+                                <i class="fab fa-youtube mr-2"></i> VEZI PROIECT REGIE
+                            </a>
                         </div>
                     </div>
                 </section>
+
+                <!-- Viitor -->
+                <section class="bg-white p-10 rounded-[3rem] border-2 border-dashed border-slate-200">
+                    <h2 class="text-2xl font-bold mb-8 text-center italic">Viitor & Obiective</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-2xl flex items-center gap-4">
+                            <span class="text-2xl">🚀</span>
+                            <span class="text-sm font-medium italic text-slate-700">Leadership internațional</span>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl flex items-center gap-4">
+                            <span class="text-2xl">🎬</span>
+                            <span class="text-sm font-medium italic text-slate-700">Perfecționare în regie video</span>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </div>
     </div>
 
-    <footer class="mt-20 py-12 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="font-serif italic text-2xl text-slate-400">"Pasiune în fiecare mișcare."</p>
-            <div class="mt-8 flex justify-center space-x-6 text-slate-300">
-                <i class="fab fa-instagram hover:text-pink-500 cursor-pointer"></i>
-                <i class="fab fa-linkedin hover:text-blue-500 cursor-pointer"></i>
-                <i class="fab fa-tiktok hover:text-black cursor-pointer"></i>
-            </div>
-            <p class="mt-6 text-[10px] text-slate-400 uppercase tracking-widest">&copy; 2026 CV Digital Personal - Creat pentru Urzica Mihaela</p>
-        </div>
+    <footer class="mt-20 py-12 bg-white border-t border-slate-100 text-center">
+        <p class="font-serif italic text-2xl text-slate-400 mb-8">"Pasiune în fiecare mișcare."</p>
+        <p class="text-[10px] text-slate-400 uppercase tracking-widest">&copy; 2026 CV Digital Personal - Urzica Mihaela</p>
     </footer>
 
 </body>
